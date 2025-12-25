@@ -61,7 +61,7 @@ namespace jni
 			env->SetObjectField(config, javaClass->portAllocatorConfig, pac.get());
 
             env->SetIntField(config, javaClass->audioJitterBufferMaxPackets, nativeType.audio_jitter_buffer_max_packets);
-            env->SetBooleanField(config, javaClass->audioJitterBufferMaxPackets, nativeType.audio_jitter_buffer_fast_accelerate);
+            env->SetBooleanField(config, javaClass->audioJitterBufferFastAccelerate, nativeType.audio_jitter_buffer_fast_accelerate);
             env->SetIntField(config, javaClass->audioJitterBufferMinDelayMs, nativeType.audio_jitter_buffer_min_delay_ms);
 
 			return JavaLocalRef<jobject>(env, config);
